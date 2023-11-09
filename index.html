@@ -12,28 +12,62 @@
 
 <body>
   <div class="content-main">
-    <h1 class="sticky-top">Dashboard Main View</h1>
+    <div class="top-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="top-bar-clickable" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 5l0 14" />
+        <path d="M18 13l-6 6" />
+        <path d="M6 13l6 6" />
+      </svg>
+      <div class="top-bar-internal">
+        <h3>Dashboard</h3>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="top-bar-clickable" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 5l0 14" />
+        <path d="M18 11l-6 -6" />
+        <path d="M6 11l6 -6" />
+      </svg>
+    </div>
     <div class="item-wrapper">
       <div class="item-grid" id="cornell">
-        <iframe src="https://engage.admissions.cornell.edu/account/login" class="item-big rounded-top-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe>
-        <!-- <iframe src="" class="item-big rounded-top-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe> -->
+        <!-- <iframe src="https://engage.admissions.cornell.edu/account/login" class="item-big rounded-top-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe> -->
+        <iframe src="" class="item-big rounded-top-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe>
         <div class="item-small">
           <h2>Cornell University</h2>
           <p>Submitted 11/1/2023</p>
         </div>
-        <div class="item-small rounded-top-right"></div> 
+        <div class="item-small rounded-top-right">
+          <h3>Early Decision</h3>
+        </div> 
         <div class="item-medium"></div>
         <div class="item-small"></div>
         <div class="item-small"></div>
       </div>
       <div class="item-grid" id="purdue">
-        <iframe src="https://www.admissions.purdue.edu/apply/applicationstatus.php" class="item-big rounded-bottom-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe>
-        <!-- <iframe src="" class="item-big rounded-bottom-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe> -->
+        <!-- <iframe src="https://www.admissions.purdue.edu/apply/applicationstatus.php" class="item-big" style="width:100%; border:none; overscroll-behavior:contain;"></iframe> -->
+        <iframe src="" class="item-big" style="width:100%; border:none; overscroll-behavior:contain;"></iframe>
         <div class="item-small">
           <h2>Purdue University</h2>
           <p>Submitted 11/1/2023</p>
         </div>
-        <div class="item-small"></div>  
+        <div class="item-small">
+          <h3>Early Action</h3>
+        </div>  
+        <div class="item-medium"></div>
+        <div class="item-small"></div>
+        <div class="item-small"></div> 
+      </div>
+      <div class="item-grid" id="northeastern">
+        <!-- <iframe src="https://apply.northeastern.edu/portal/app_status?utm_campaign=FRapplicant&utm_content=ASC_appacknowledge&utm_medium=email&utm_source=deliver&utm_term=fa24" class="item-big rounded-bottom-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe> -->
+        <iframe src="" class="item-big rounded-bottom-left" style="width:100%; border:none; overscroll-behavior:contain;"></iframe>
+        <div class="item-small">
+          <h2>Northeastern University</h2>
+          <p>Submitted 11/1/2023</p>
+        </div>
+        <div class="item-small">
+          <h3>Early Action</h3>
+        </div>  
         <div class="item-medium"></div>
         <div class="item-small"></div>
         <div class="item-small rounded-bottom-right"></div> 
