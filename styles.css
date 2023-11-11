@@ -59,12 +59,13 @@ p {
 /* End Defaults */
 
 .top-bar {
-  position: sticky;
+  position: fixed;
   top: 0.5rem;
   margin: 0 0 1rem 0;
   padding: 4px 0;
-  width: 30%;
+  width: 30vw;
   height: 3rem;
+  right: calc(50vw - 15vw);
 
   border: 2px solid var(--trim);
   border-radius: 4rem;
@@ -77,12 +78,15 @@ p {
   gap: 0.5rem;
 
   user-select: none;
-
-  transform: none;
-  transition: transform 0.5s ease-in-out;
 }
 .top-bar.scrolled {
-  transition: transform 0.5s ease-in-out;
+  height: 6vw;
+  width: 3rem;
+  right: 0.5vw;
+  flex-direction: column-reverse;
+}
+.top-bar.scrolled > .top-bar-internal {
+  display: none;
 }
 
 .top-bar-internal {
@@ -98,9 +102,6 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-.top-bar-internal:hover {
-  cursor: move;
 }
 
 .top-bar-icon {
@@ -133,7 +134,7 @@ p {
 .item-wrapper {
   height: 100%;
   width: 90%;
-  padding: 0 0 1em 0;
+  padding: 5em 0 1em 0;
 
   display: flex;
   justify-content: flex-start;
@@ -167,6 +168,54 @@ p {
 
 .item-medium {
   grid-column: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.progress {
+  width: 100%;
+  height: 4rem;
+  border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background-color: var(--trim-tinted);
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent);
+  color: #fff;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-bar > p {
+  margin-left: 40px;
+}
+
+.progress-labels {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-labels > p {
+  width: fit-content;
+  color: var(--accent);
 }
 
 .item-big {
