@@ -1,6 +1,6 @@
 
 const useIFrame = false;
-const populationDelay = 500;
+const populateInfoDelay = 500;
 const updateProgressDelay = 1000;
 
 const collegeInfo = {

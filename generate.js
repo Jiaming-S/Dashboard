@@ -34,7 +34,7 @@ setTimeout(function populateCollegeInfo() {
     curRow.querySelector('.college-application-type').textContent = curInfo.appType;
     curRow.querySelector('.progress').id = `${curInfo.id}-progress`;
   }
-}, populationDelay);
+}, populateInfoDelay);
 
 setTimeout(function updateProgressBars() {
   const allProgressBars = document.querySelectorAll('.progress');
@@ -55,7 +55,7 @@ setTimeout(function updateProgressBars() {
 
     curBar.querySelector('.progress-bar').style.width = `${percent}%`;
     curBar.querySelector('.progress-bar').textContent = `${percent}%`;
-    
+
     curBar.parentElement.querySelector('.progress-labels > p:nth-child(1)').textContent = dateSubmitted.toLocaleDateString();
     curBar.parentElement.querySelector('.progress-labels > p:nth-child(2)').textContent = "~" + dateResponse.toLocaleDateString();
   };
