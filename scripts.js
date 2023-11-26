@@ -27,25 +27,6 @@ upArrow.addEventListener('click', () => {
 });
 
 
-const allProgressBars = document.querySelectorAll('.progress');
-
-setTimeout(function updateProgressBars() {
-  allProgressBars.forEach((bar) => {
-    const collegeName = bar.id.split('-')[0];
-    const info = collegeInfo[collegeName];
-    const timeSubmitted = new Date(info.timeSubmitted);
-    const timeResponse = new Date(info.timeResponse);
-    const now = new Date();
-    const total = timeResponse - timeSubmitted;
-    const elapsed = now - timeSubmitted;
-    const percent = Math.round(100 * elapsed / total);
-    bar.querySelector('.progress-bar').style.width = `${percent}%`;
-    bar.querySelector('.progress-bar').innerHTML = `${percent}%`;
-    bar.parentElement.querySelector('.progress-labels > p:nth-child(1)').innerHTML = timeSubmitted.toLocaleDateString();
-    bar.parentElement.querySelector('.progress-labels > p:nth-child(2)').innerHTML = "~" + timeResponse.toLocaleDateString();
-  });
-}, 300);
-
 
 
 

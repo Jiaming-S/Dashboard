@@ -1,4 +1,8 @@
 
+const useIFrame = false;
+const populationDelay = 500;
+const progressBarDelay = 1000;
+
 const collegeInfo = {
   cornell: {
     name: "Cornell University",
