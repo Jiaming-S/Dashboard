@@ -27,23 +27,6 @@ upArrow.addEventListener('click', () => {
 });
 
 
-const collegeInfo = {
-  cornell: {
-    name: "cornell",
-    timeSubmitted: "11/01/2023",
-    timeResponse: "12/12/2023"
-  },
-  purdue: {
-    name: "purdue", 
-    timeSubmitted: "11/01/2023",
-    timeResponse: "01/15/2024"
-  },
-  northeastern: {
-    name: "northeastern",
-    timeSubmitted: "11/01/2023",
-    timeResponse: "01/28/2024"
-  }
-}
 const allProgressBars = document.querySelectorAll('.progress');
 
 setTimeout(function updateProgressBars() {
