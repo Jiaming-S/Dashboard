@@ -14,31 +14,28 @@ if (placeholderNum !== rowNum) {
   }
 }
 
-const collegeInfo = {
-  cornell: {
-    name: "Cornell University",
-    appType: "Early Decision",
-    timeSubmitted: "11/01/2023",
-    timeResponse: "12/12/2023",
-    collegePortalWebsite: "https://engage.admissions.cornell.edu/account/login",
-  },
-  purdue: {
-    name: "Purdue University",
-    appType: "Early Action",
-    timeSubmitted: "11/01/2023",
-    timeResponse: "01/15/2024",
-    collegePortalWebsite: "https://www.admissions.purdue.edu/apply/applicationstatus.php",
-  },
-  northeastern: {
-    name: "Northeastern University",
-    appType: "Early Action",
-    timeSubmitted: "11/01/2023",
-    timeResponse: "01/28/2024",
-    collegePortalWebsite: "https://apply.northeastern.edu/portal/app_status?utm_campaign=FRapplicant&utm_content=ASC_appacknowledge&utm_medium=email&utm_source=deliver&utm_term=fa24",
-  },
-};
+
 for (let i = 0; i < rowNum; i++) {
+  const curKey = Object.keys(collegeInfo)[i];
+  const curInfo = {
+    name: collegeInfo[curKey].name,
+    id: collegeInfo[curKey].id,
+    appType: collegeInfo[curKey].appType,
+    timeSubmitted: collegeInfo[curKey].timeSubmitted,
+    timeResponse: collegeInfo[curKey].timeResponse,
+    collegePortalWebsite: collegeInfo[curKey].collegePortalWebsite,
+  }
+  const curRow = placeholders[i];
+  curRow.id = `${curInfo.id}`;
+
+  curRow.querySelector('iframe').src = curInfo.collegePortalWebsite;
+
+  curRow.querySelectorAll('.item-small')[0].querySelector('h2').textContent = curInfo.name;
+  curRow.querySelectorAll('.item-small')[0].querySelector('p').textContent = `Submitted ${curInfo.timeSubmitted}`;
   
+  curRow.querySelectorAll('.item-small')[1].querySelector('h3').textContent = curInfo.appType;
+
+  curRow.querySelectorAll('.item-medium')[0].querySelector('.progress').id = `${curInfo.id}-progress`;
 }
 
 

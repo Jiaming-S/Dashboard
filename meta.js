@@ -2,6 +2,7 @@
 const collegeInfo = {
   cornell: {
     name: "Cornell University",
+    id: "cornell",
     appType: "Early Decision",
     timeSubmitted: "11/01/2023",
     timeResponse: "12/12/2023",
@@ -9,6 +10,7 @@ const collegeInfo = {
   },
   purdue: {
     name: "Purdue University",
+    id: "purdue",
     appType: "Early Action",
     timeSubmitted: "11/01/2023",
     timeResponse: "01/15/2024",
@@ -16,6 +18,7 @@ const collegeInfo = {
   },
   northeastern: {
     name: "Northeastern University",
+    id: "northeastern",
     appType: "Early Action",
     timeSubmitted: "11/01/2023",
     timeResponse: "01/28/2024",
