@@ -1,7 +1,7 @@
 
 const useIFrame = false;
-const populateInfoDelay = 500;
-const updateProgressDelay = 1000;
+const populateInfoDelay = 150;
+const updateProgressDelay = 400;
 
 const collegeInfo = {
   cornell: {
@@ -28,4 +28,15 @@ const collegeInfo = {
     dateResponse: "1/28/2024",
     collegePortalWebsite: "https://apply.northeastern.edu/portal/app_status?utm_campaign=FRapplicant&utm_content=ASC_appacknowledge&utm_medium=email&utm_source=deliver&utm_term=fa24",
   },
+  udub: {
+    name: "University of Washington",
+    id: "udub",
+    appType: "Early Action",
+    dateSubmitted: "11/15/2023",
+    dateResponse: "3/1/2024",
+    collegePortalWebsite: "https://admit.washington.edu/uw-netid/",
+  },
 };
+
+
+

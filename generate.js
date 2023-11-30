@@ -2,7 +2,7 @@
 const wrapper = document.querySelector('.item-wrapper');
 const rowNum = Object.keys(collegeInfo).length;
 
-setTimeout(function populateCollegeInfo() {
+(function generatePlaceholders() {
   const placeholders = document.querySelectorAll('.item-wrapper > .placeholder');
   const placeholderNum = placeholders.length;
   if (placeholderNum !== rowNum) {
@@ -13,7 +13,11 @@ setTimeout(function populateCollegeInfo() {
       for (let i = placeholderNum; i < rowNum; i++) wrapper.insertBefore(placeholders[1].cloneNode(true), placeholders[1]);
     }
   }
-  
+})();
+
+setTimeout(function populateCollegeInfo() {
+  const updatedPlaceholders = document.querySelectorAll('.item-wrapper > .placeholder');
+
   for (let i = 0; i < rowNum; i++) {
     const curKey = Object.keys(collegeInfo)[i];
     const curInfo = {
@@ -24,7 +28,7 @@ setTimeout(function populateCollegeInfo() {
       dateResponse: collegeInfo[curKey].dateResponse,
       collegePortalWebsite: collegeInfo[curKey].collegePortalWebsite,
     }
-    const curRow = placeholders[i];
+    const curRow = updatedPlaceholders[i];
     curRow.classList.remove('placeholder');
     curRow.id = `${curInfo.id}`;
   
