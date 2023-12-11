@@ -1,5 +1,5 @@
 
-const useIFrame = false;
+const useIFrame = true;
 const populateInfoDelay = 150;
 const updateProgressDelay = 400;
 
@@ -9,14 +9,14 @@ const collegeInfo = {
     id: "cornell",
     appType: "Early Decision",
     dateSubmitted: "11/1/2023",
-    dateResponse: "12/12/2023",
+    dateResponse: "12/15/2023",
     collegePortalWebsite: "https://engage.admissions.cornell.edu/account/login",
   },
   purdue: {
     name: "Purdue University",
     id: "purdue",
     appType: "Early Action",
-    dateSubmitted: "11/1/2023",
+    dateSubmitted: "11/1/2023", 
     dateResponse: "1/15/2024",
     collegePortalWebsite: "https://www.admissions.purdue.edu/apply/applicationstatus.php",
   },
@@ -35,6 +35,14 @@ const collegeInfo = {
     dateSubmitted: "11/15/2023",
     dateResponse: "3/1/2024",
     collegePortalWebsite: "https://admit.washington.edu/uw-netid/",
+  },
+  uc: {
+    name: "University of California",
+    id: "uc",
+    appType: "Regular Decision",
+    dateSubmitted: "11/29/2023",
+    dateResponse: "3/10/2024",
+    collegePortalWebsite: "https://apply.universityofcalifornia.edu/my-application/login",
   },
 };
 
