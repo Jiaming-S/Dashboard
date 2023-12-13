@@ -57,7 +57,11 @@ setTimeout(function updateProgressBars() {
     const elapsed = now - dateSubmitted;
 
     let percent = Math.round(100 * elapsed / total);
-    if (percent > 100) percent = 100;
+    if (percent >= 100) {
+      percent = 100;
+      curBar.classList.add('complete');
+    }
+    
     if (percent < 0) percent = 0;
 
     curBar.querySelector('.progress-bar').style.width = `${percent}%`;

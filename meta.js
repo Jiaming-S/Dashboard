@@ -9,7 +9,7 @@ const collegeInfo = {
     id: "cornell",
     appType: "Early Decision",
     dateSubmitted: "11/1/2023",
-    dateResponse: "12/15/2023",
+    dateResponse: "12/14/2023",
     collegePortalWebsite: "https://engage.admissions.cornell.edu/account/login",
   },
   purdue: {
@@ -35,6 +35,14 @@ const collegeInfo = {
     dateSubmitted: "11/15/2023",
     dateResponse: "3/1/2024",
     collegePortalWebsite: "https://admit.washington.edu/uw-netid/",
+  },
+  ut: {
+    name: "University of Texas Austin",
+    id: "ut",
+    appType: "Regular Decision",
+    dateSubmitted: "12/1/2023",
+    dateResponse: "3/1/2024",
+    collegePortalWebsite: "https://bealonghorn.admissions.utexas.edu/portal/mystatus?tab=admissions",
   },
   uc: {
     name: "University of California",

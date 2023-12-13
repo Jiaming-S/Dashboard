@@ -199,6 +199,9 @@ p {
   color: #fff;
   transition: width 0.5s ease-in-out;
 }
+.progress-bar.complete {
+  background: linear-gradient(to right, #f47c34, #e03f97);
+}
 
 .progress-bar > p {
   margin-left: 40px;
