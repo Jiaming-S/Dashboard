@@ -59,7 +59,7 @@ setTimeout(function updateProgressBars() {
     let percent = Math.round(100 * elapsed / total);
     if (percent >= 100) {
       percent = 100;
-      curBar.classList.add('complete');
+      curBar.querySelector('.progress-bar').classList.add('complete');
     }
     
     if (percent < 0) percent = 0;
@@ -71,6 +71,15 @@ setTimeout(function updateProgressBars() {
     curBar.parentElement.querySelector('.progress-labels > p:nth-child(2)').textContent = "~" + dateResponse.toLocaleDateString();
   };
 }, updateProgressDelay);
+
+// setTimeout(function verifyIFramesLoaded() {
+//   const allIFrames = document.querySelectorAll('iframe');
+//   for (let curFrame of allIFrames) {
+//     if (curFrame.contentWindow.length <= 0) {
+//       curFrame.classList.add('unavailable');
+//     }
+//   }
+// }, IFrameVerificationDelay)
 
 
 
