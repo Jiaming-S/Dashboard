@@ -2,7 +2,7 @@
 const topBar = document.querySelector('.top-bar');
 document.addEventListener('scroll', () => {
   curScroll = window.scrollY;
-  if (curScroll > 50) {
+  if (curScroll > 30) {
     topBar.classList.add('scrolled');
   }
   else {

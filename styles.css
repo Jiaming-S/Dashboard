@@ -14,10 +14,10 @@
 
   --browser-aspect-ratio: 1440 / 800;
 
-  --item-opacity: 0.9;
+  /* --item-opacity: 0.9; */
 
   --main-bg: #fafafa;
-  --main-bg-tinted: #e4e5f1;
+  --main-bg-tinted: rgba(244, 245, 241, 0.8);
   --trim: #d2d3db;
   --trim-tinted: #9394a5;
   --accent: #484b6a;
