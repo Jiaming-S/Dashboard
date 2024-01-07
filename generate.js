@@ -65,7 +65,7 @@ setTimeout(function updateProgressBars() {
     if (percent < 0) percent = 0;
 
     curBar.querySelector('.progress-bar').style.width = `${percent}%`;
-    curBar.querySelector('.progress-bar').textContent = `${percent}%`;
+    curBar.querySelector('.progress-bar > p').textContent = `${percent}%`;
 
     curBar.parentElement.querySelector('.progress-labels > p:nth-child(1)').textContent = dateSubmitted.toLocaleDateString();
     curBar.parentElement.querySelector('.progress-labels > p:nth-child(2)').textContent = "~" + dateResponse.toLocaleDateString();

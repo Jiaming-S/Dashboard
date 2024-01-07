@@ -1,5 +1,5 @@
 
-const useIFrame = true;
+const useIFrame = false;
 const populateInfoDelay = 150;
 const updateProgressDelay = 400;
 const IFrameVerificationDelay = 4000;
