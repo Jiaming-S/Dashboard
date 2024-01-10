@@ -32,7 +32,7 @@ const collegeInfo = {
   udub: {
     name: "University of Washington",
     id: "udub",
-    appType: "Early Action",
+    appType: "Regular Decision",
     dateSubmitted: "11/15/2023",
     dateResponse: "3/1/2024",
     collegePortalWebsite: "https://admit.washington.edu/uw-netid/",

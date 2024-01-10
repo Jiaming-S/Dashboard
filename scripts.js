@@ -1,7 +1,8 @@
 
 const topBar = document.querySelector('.top-bar');
-document.addEventListener('scroll', () => {
-  curScroll = window.scrollY;
+const mainScroller = document.querySelector('.content-main');
+mainScroller.addEventListener('scroll', () => {
+  curScroll = mainScroller.scrollTop;
   if (curScroll > 30) {
     topBar.classList.add('scrolled');
   }
@@ -12,7 +13,7 @@ document.addEventListener('scroll', () => {
 
 const downArrow = document.querySelector('#down-arrow');
 downArrow.addEventListener('click', () => {
-  window.scrollBy({
+  mainScroller.scrollBy({
     top: window.innerHeight,
     behavior: 'smooth'
   });
@@ -20,7 +21,7 @@ downArrow.addEventListener('click', () => {
 
 const upArrow = document.querySelector('#up-arrow');
 upArrow.addEventListener('click', () => {
-  window.scrollBy({
+  mainScroller.scrollBy({
     top: -window.innerHeight,
     behavior: 'smooth'
   });

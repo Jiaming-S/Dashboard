@@ -13,7 +13,7 @@
   --border-radius-small: 4px;
   --border-radius: 24px;
 
-  --main-content-top-pad: 5em;
+  --main-content-top-pad: 10rem;
 
   --browser-aspect-ratio: 1440 / 800;
 
@@ -71,6 +71,7 @@ p {
   width: 20vw;
   height: 2.4rem;
   right: calc(50vw - 10vw);
+  z-index: 100;
 
   border: 2px solid var(--trim);
   border-radius: 4rem;
@@ -120,14 +121,14 @@ p {
 }
 .top-bar-icon:hover {
   cursor: pointer;
-  background-color: var(--main-bg-tinted);
+  background-color: var(--trim);
   transition: background-color 0.2s ease-in-out;
 } 
 
 
 
 .content-main {
-  height: 100%; 
+  height: 100vh; 
   width: 100%; 
   
   display: flex;
@@ -135,14 +136,18 @@ p {
   align-items: center;
   flex-direction: column;
 
+  background-color: #582511;
+  overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior: none;
   transform-style: preserve-3d;
-  perspective: 2px;
+  perspective: 4px;
 }
-.content-main::before {
-  content: '';
+
+.background-image {
   position: fixed;
   inset: 0;
+  height: 100vh;
   z-index: -1;
   background: url("./assets/images/supertf.png");
   background-size: cover;
@@ -150,13 +155,14 @@ p {
   opacity: var(--item-opacity);
   pointer-events: none;
 
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-4px) scale(2.4);
 }
 
 .item-wrapper {
+  position: relative;
   height: 100%;
   width: 90%;
-  padding: var(--main-content-top-pad) 0 1em 0;
+  padding: var(--main-content-top-pad) 0 0 0;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
