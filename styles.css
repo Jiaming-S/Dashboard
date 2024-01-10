@@ -141,32 +141,49 @@ p {
   overflow-y: auto;
   overscroll-behavior: none;
   transform-style: preserve-3d;
-  perspective: 4px;
+  perspective: 100px;
 }
 
 .background-image {
   position: fixed;
   inset: 0;
   height: 100vh;
-  z-index: -1;
-  background: url("./assets/images/supertf.png");
+  width: 100vw;
   background-size: cover;
   background-position: center;
-  opacity: var(--item-opacity);
   pointer-events: none;
-
-  transform: translateZ(-4px) scale(2.4);
+}
+.img1 {
+  background-image: url("./assets/images/super-1.png");
+  transform: translateZ(-100px) scale(2);
+}
+.img2 {
+  background-image: url("./assets/images/super-2.png");
+  transform: translateZ(-125px) scale(2.25);
+}
+.img3 {
+  background-image: url("./assets/images/super-3.png");
+  transform: translateZ(-150px) scale(2.5);
+}
+.img4 {
+  background-image: url("./assets/images/super-4.png");
+  transform: translateZ(-175px) scale(2.75);
+}
+.img5 {
+  background-image: url("./assets/images/super-5.png");
+  transform: translateZ(-200px) scale(3);
 }
 
 .item-wrapper {
   position: relative;
   height: 100%;
-  width: 90%;
+  width: clamp(1200px, 90%, 1600px);
   padding: var(--main-content-top-pad) 0 0 0;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap-size);
+  opacity: 0;
 }
 
 .item-grid {
