@@ -25,6 +25,22 @@
   --trim: #d2d3db;
   --trim-tinted: #9394a5;
   --accent: #484b6a;
+
+  /* Parallax Offsets */
+  --offset-1: -250px;
+  --scaling-1: 3.50;
+
+  --offset-2: -300px;
+  --scaling-2: 4.00;
+
+  --offset-3: -375px;
+  --scaling-3: 4.75;
+
+  --offset-4: -600px;
+  --scaling-4: 7.00;
+
+  --offset-5: -750px;
+  --scaling-5: 8.50;
 }
 body {
   overflow-x: hidden;
@@ -154,7 +170,7 @@ p {
 }
 .img1 {
   background-image: url("./assets/images/super-1.png");
-  transform: translateZ(-100px) scale(2);
+  transform: translateZ(var(--offset-1)) scale(var(--scaling-1));
 }
 .img1::after {
   content: "";
@@ -166,19 +182,19 @@ p {
 }
 .img2 {
   background-image: url("./assets/images/super-2.png");
-  transform: translateZ(-125px) scale(2.25);
+  transform: translateZ(var(--offset-2)) scale(var(--scaling-2));
 }
 .img3 {
   background-image: url("./assets/images/super-3.png");
-  transform: translateZ(-150px) scale(2.5);
+  transform: translateZ(var(--offset-3)) scale(var(--scaling-3));
 }
 .img4 {
   background-image: url("./assets/images/super-4.png");
-  transform: translateZ(-175px) scale(2.75);
+  transform: translateZ(var(--offset-4)) scale(var(--scaling-4));
 }
 .img5 {
   background-image: url("./assets/images/super-5.png");
-  transform: translateZ(-200px) scale(3);
+  transform: translateZ(var(--offset-5)) scale(var(--scaling-5));
 }
 
 .item-wrapper {
